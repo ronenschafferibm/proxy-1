@@ -65,3 +65,6 @@ This section describes how to build envoy locally (in a docker image) with a loc
 | docker-istio-proxy | Dockerfile_istio_proxy | istio-proxy | builds an istio-proxy image. it basically uses the current istio-proxy docker image and replaces its envoy executable with the cilium-envoy version | 
 | docker-image-envoy-local-dev | Dockerfile.local_dev | docker-image-envoy-local-dev | **This is my addition** builds envoy with the local repo of istio filters |
 
+
+## See also
+- https://github.com/ronenschafferibm/cilium/blob/dns-filter/proxylib/dns/README.md
