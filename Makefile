@@ -85,6 +85,10 @@ docker-image-envoy: Dockerfile clean .dockerignore
 	$(QUIET)echo "Push like this when ready:"
 	$(QUIET)echo "docker push quay.io/cilium/cilium-envoy:$(SOURCE_VERSION)"
 
+docker-image-envoy-local-dev: Dockerfile.local_dev clean .dockerignore
+	@$(ECHO_GEN) docker-image-envoy-local-dev
+	$(DOCKER) build -t "cilium-envoy-local-dev:$(SOURCE_VERSION)" .
+
 debug: envoy-debug
 
 api: force-non-root Makefile.api
